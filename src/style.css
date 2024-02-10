@@ -1,0 +1,399 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  color: #222;
+  line-height: 1.25;
+  background: #fff;
+  padding: 32px;
+}
+
+.fake-dark-mode {
+  filter: invert(100%);
+  transition: all 0.5s;
+}
+
+.btn-fake-dark-mode {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 16px;
+  line-height: 1;
+  font-size: 26px;
+  background-color: #ffe8cc;
+  border: none;
+}
+
+section {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 32px;
+  font-weight: bold;
+
+  justify-content: space-between;
+  display: flex;
+}
+
+h1 {
+  font-size: 26px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+h1 span {
+  font-size: 140%;
+  line-height: 1;
+}
+
+h2 {
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+h3 {
+  text-transform: capitalize;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+header div {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+header button {
+  font-size: 14px;
+}
+
+form {
+  padding: 24px;
+  background-color: #fff4e6;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+main {
+  margin-bottom: 40px;
+}
+
+aside {
+  margin-bottom: 40px;
+  opacity: 75%;
+}
+
+input,
+textarea,
+button {
+  font-size: 16px;
+  padding: 8px 12px;
+  border: 1px solid #ffe8cc;
+  font-family: inherit;
+  color: inherit;
+}
+
+input {
+  width: 12rem;
+}
+
+*::placeholder {
+  color: #999;
+}
+
+*:focus {
+  outline: 2px solid #ffa94d;
+  border-radius: 2px;
+}
+
+textarea {
+  flex: 1;
+  height: 50px;
+}
+
+button {
+  border: 1px solid #ffa94d;
+  background-color: #ffa94d;
+  font-weight: 700;
+  padding: 9px 24px;
+  cursor: pointer;
+}
+
+h3 {
+  text-transform: capitalize;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+main ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+main li {
+  border: 1px solid #ffe8cc;
+  padding: 16px 20px;
+}
+
+main li:hover {
+  background-color: #fff4e6;
+}
+
+aside ul {
+  font-size: 90%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+aside li {
+  border: 1px solid #ffe8cc;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 + button {
+  margin-bottom: 24px;
+}
+
+aside li button {
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+select {
+  padding: 10px;
+  border-radius: 100px;
+  border-width: 1px;
+  border-color: #ffeacb;
+}
+
+select:hover {
+  background-color: #fff4e6;
+}
+
+.footer {
+  cursor: pointer;
+}
+
+.Post-Title-Community {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  header h1 {
+    font-size: 24px; /* Adjusted font size for mobile */
+    margin-bottom: 12px; /* Adjusted margin for mobile */
+  }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+
+    color: #222;
+    line-height: 1.25;
+    background: #fff;
+    padding: 16px; /* Adjusted padding for better mobile experience */
+  }
+
+  .fake-dark-mode {
+    filter: invert(100%);
+    transition: all 0.5s;
+  }
+
+  /* .btn-fake-dark-mode {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    padding: 8px;
+    line-height: 1;
+    font-size: 18px;
+    background-color: #ffe8cc;
+    border: none;
+  } */
+
+  .btn-fake-dark-mode {
+    display: flex;
+    position: absolute;
+    justify-content: end;
+    background-color: transparent;
+  }
+
+  section {
+    width: 100%; /* Full width */
+    margin: 0;
+  }
+
+  header {
+    margin-bottom: 16px; /* Reduced margin for mobile */
+    font-weight: bold;
+    display: flex;
+    flex-direction: column; /* Adjusted layout for mobile */
+    align-items: center; /* Centered items for mobile */
+  }
+
+  h1 {
+    font-size: 20px; /* Increased font size for mobile */
+    margin-bottom: 8px;
+  }
+
+  h1 span {
+    font-size: 120%; /* Adjusted font size for mobile */
+  }
+
+  h2 {
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: #333;
+  }
+
+  h3 {
+    text-transform: capitalize;
+    margin-bottom: 8px; /* Reduced margin for mobile */
+    color: #333;
+  }
+
+  header div {
+    width: 100%; /* Full width */
+    display: flex;
+    flex-direction: column; /* Adjusted layout for mobile */
+    gap: 16px;
+    align-items: center;
+  }
+
+  header button {
+    font-size: 14px;
+    width: 100%; /* Full width */
+  }
+
+  form {
+    width: 100%; /* Full width */
+    padding: 16px;
+    background-color: #fff4e6;
+    display: flex;
+    flex-direction: column; /* Adjusted layout for mobile */
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  main {
+    width: 100%; /* Full width */
+    margin-bottom: 20px;
+  }
+
+  aside {
+    width: 100%; /* Full width */
+    margin-bottom: 20px;
+    opacity: 75%;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 1px solid #ffe8cc;
+    font-family: inherit;
+    color: inherit;
+    width: 100%; /* Full width */
+  }
+
+  *::placeholder {
+    color: #999;
+  }
+
+  *:focus {
+    outline: 2px solid #ffa94d;
+    border-radius: 2px;
+  }
+
+  textarea {
+    height: 100px; /* Increased height for better mobile experience */
+  }
+
+  button {
+    border: 1px solid #ffa94d;
+    background-color: #ffa94d;
+    font-weight: 700;
+    padding: 12px;
+    cursor: pointer;
+    width: 100%; /* Full width */
+  }
+
+  main ul {
+    width: 100%; /* Full width */
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Adjusted layout for mobile */
+    gap: 16px;
+  }
+
+  main li {
+    width: 100%; /* Full width */
+    border: 1px solid #ffe8cc;
+    padding: 12px;
+  }
+
+  main li:hover {
+    background-color: #fff4e6;
+  }
+
+  aside ul {
+    font-size: 90%;
+    list-style: none;
+    width: 100%; /* Full width */
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  aside li {
+    width: 100%; /* Full width */
+    border: 1px solid #ffe8cc;
+    padding: 4px 8px;
+    display: flex;
+    flex-direction: column; /* Adjusted layout for mobile */
+    gap: 4px;
+  }
+
+  h2 + button {
+    margin-bottom: 16px; /* Reduced margin for mobile */
+  }
+
+  aside li button {
+    padding: 4px 8px;
+    font-size: 14px;
+    width: 100%; /* Full width */
+  }
+
+  .footer {
+    cursor: pointer;
+    width: 100%; /* Full width */
+  }
+}
