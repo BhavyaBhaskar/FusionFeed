@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import supabase from "../supabase";
 
 function FormAddPost() {
@@ -7,14 +7,28 @@ function FormAddPost() {
   const [body, setBody] = useState("");
   const [community, setCommunity] = useState("");
 
+  let query;
+  useEffect(function () {
+    async function fetchData() {
+      query = await supabase.from("Community").select("*");
+      console.log(query);
+    }
+    fetchData();
+  }, []);
+
   const handleSubmit = async function (e) {
     e.preventDefault();
     if (!body || !title) return;
-
-    const { data, error } = await supabase
-      .from("Post")
-      .insert([{ title, body, community }])
-      .select();
+    if (
+      community === "VIT-AP" ||
+      community === "SRM-AP" ||
+      community === null
+    ) {
+      const { data, error } = await supabase
+        .from("Post")
+        .insert([{ title, body, community }])
+        .select();
+    }
 
     setTitle("");
     setBody("");

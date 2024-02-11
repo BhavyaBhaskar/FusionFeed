@@ -1,5 +1,20 @@
+import { useEffect } from "react";
+import supabase from "../supabase";
+
 /* eslint-disable react/prop-types */
 function SelectCommunity({ setCommunity }) {
+  let query;
+
+  useEffect(
+    function () {
+      async function fetchData() {
+        query = await supabase.from("Post").select("*");
+      }
+      fetchData();
+    },
+    [query]
+  );
+
   return (
     <>
       <span>Select Community</span>

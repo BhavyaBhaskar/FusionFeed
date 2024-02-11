@@ -35,7 +35,7 @@ function PostList({ community }) {
   );
 }
 
-function Post({ key, title, body, postcommunity, community }) {
+function Post({ title, body, postcommunity, community }) {
   if (postcommunity === community) {
     return (
       <li>
