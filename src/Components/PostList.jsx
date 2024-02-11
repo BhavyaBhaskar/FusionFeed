@@ -53,7 +53,7 @@ function Post({ key, title, body, postcommunity, community }) {
       <li>
         <div className="Post-Title-Community">
           <h3>{title}</h3>
-          <h2 className="Post-Community">{postcommunity}</h2>
+          {postcommunity && <h2 className="Post-Community">{postcommunity}</h2>}
         </div>
         <p>{body}</p>
       </li>
