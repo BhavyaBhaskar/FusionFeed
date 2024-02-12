@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <div className="footer">
-      <footer>&copy; by The Fesion Feed ✌️</footer>
+      <footer>&copy; by The Bhavya Bhavya ✌️</footer>
       <span>
         <p>
           <a className="link" href="mailto:Bhavyabhaskar04@gmail.com">
