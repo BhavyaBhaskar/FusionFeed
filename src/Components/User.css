@@ -1,0 +1,28 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.grid-item {
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f3f4f6;
+}
+
+.dark .grid-item {
+  background-color: #111827;
+}
+
+.inner-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.space-y-2 > * + * {
+  margin-top: 0.5rem;
+}
+
+.category-list {
+  display: grid;
+  gap: 0.25rem;
+}

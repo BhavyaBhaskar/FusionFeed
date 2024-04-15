@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import supabase from "../supabase";
 
 function FormAddPost() {
@@ -8,7 +8,7 @@ function FormAddPost() {
   const [community, setCommunity] = useState("");
 
   let query;
-  useEffect(function () {
+  useRef(function () {
     async function fetchData() {
       query = await supabase.from("Community").select("*");
       console.log(query);
@@ -19,11 +19,7 @@ function FormAddPost() {
   const handleSubmit = async function (e) {
     e.preventDefault();
     if (!body || !title) return;
-    if (
-      community === "VIT-AP" ||
-      community === "SRM-AP" ||
-      community === null
-    ) {
+    if (community === "VIT-AP" || community === "SRM-AP" || community === "") {
       const { data, error } = await supabase
         .from("Post")
         .insert([{ title, body, community }])

@@ -11,7 +11,6 @@ function Header({ setCommunity }) {
       <div>
         <SelectCommunity setCommunity={setCommunity} />
         <SearchPost />
-        <button>Clear posts</button>
       </div>
     </header>
   );
